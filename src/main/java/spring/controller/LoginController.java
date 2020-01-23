@@ -10,4 +10,14 @@ public class LoginController {
     public String showMyLoginPage() {
         return "fancy-login";
     }
+
+    @GetMapping("/")
+    public String showLanding() {
+        return "landing";
+    }
+
+    @GetMapping("/employees")
+    public String showHome() {
+        return "home";
+    }
 }
