@@ -27,6 +27,20 @@
 
     <hr>
 
+    <security:authorize access="hasRole('MANAGER')">
+        <p>
+            <a href="${pageContext.request.contextPath}/leaders">LeaderShip Meeting</a>
+        </p>
+    </security:authorize>
+
+    <security:authorize access="hasRole('ADMIN')">
+    	<p>
+    		<a href="${pageContext.request.contextPath}/systems">IT Systems Meeting</a>
+    	</p>
+    </security:authorize>
+
+    <hr>
+
     <form:form action="${pageContext.request.contextPath}/logout" method="POST">
     	<input type="submit" value="Logout" />
 
