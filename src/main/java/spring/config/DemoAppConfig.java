@@ -42,12 +42,12 @@ public class DemoAppConfig {
 
         // for sanity sake to log the url and user just to make sure we are reading the data
         logger.info(">>>> jdbc.url=" + env.getProperty("jdbc.url"));
-        logger.info(">>>> jdbc.user=" + env.getProperty("jdbc.user"));
+        //logger.info(">>>> jdbc.user=" + env.getProperty("jdbc.user"));
 
         // set database connection properties
         securityDataSource.setJdbcUrl(env.getProperty("jdbc.url"));
-        securityDataSource.setUser(env.getProperty("jdbc.user"));
-        securityDataSource.setPassword(env.getProperty("jdbc.password"));
+        //securityDataSource.setUser(env.getProperty("jdbc.user"));
+        //securityDataSource.setPassword(env.getProperty("jdbc.password"));
 
         // set the connection pool properties
         securityDataSource.setInitialPoolSize(getIntProperty("connection.pool.initialPoolSize"));
